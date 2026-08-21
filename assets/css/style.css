@@ -962,17 +962,7 @@ html {
     height: 909px;
 }
 
-.banner-con::before {
-    position: absolute;
-    content: '';
-    background-image: url(../images/faded-ellipse.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 558px;
-    height: 558px;
-    top: 80px;
-    left: 90px;
-}
+/* .banner-con::before decorative ellipse removed — replaced by trevomind.css overlay */
 
 .banner-con .row {
     padding-top: 78px;
