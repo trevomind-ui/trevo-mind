@@ -179,7 +179,10 @@ a.secondary_btn:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(8, 14, 10, 0.87);
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(8, 14, 10, 0.87) !important;
+    background-image: none !important;
     z-index: 0;
 }
 
