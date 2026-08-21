@@ -187,8 +187,11 @@ a.secondary_btn:hover {
     background-image: url("assets/images/trevomind-bg-hero-marketing-estrategico.jpg");
     background-size: cover;
     background-position: center top;
-    padding: 80px 0 60px;
+    padding: 100px 0 80px;
     margin-top: -18px;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
 }
 
 .banner-con::before {
@@ -196,10 +199,10 @@ a.secondary_btn:hover {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        135deg,
-        rgba(8, 14, 10, 0.91) 0%,
-        rgba(13, 26, 20, 0.85) 45%,
-        rgba(27, 127, 95, 0.22) 100%
+        150deg,
+        rgba(5, 10, 7, 0.94) 0%,
+        rgba(10, 20, 14, 0.88) 50%,
+        rgba(20, 80, 55, 0.35) 100%
     );
     z-index: 0;
 }
@@ -207,15 +210,23 @@ a.secondary_btn:hover {
 .banner-con .container {
     position: relative;
     z-index: 1;
+    width: 100%;
+}
+
+.banner-content-con {
+    text-align: center;
 }
 
 .banner-content-con h1 {
     color: #fff !important;
-    font-size: clamp(28px, 4vw, 50px) !important;
+    font-size: clamp(30px, 4.5vw, 60px) !important;
     font-weight: 800 !important;
-    line-height: 1.14 !important;
+    line-height: 1.1 !important;
     letter-spacing: -0.04em !important;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #heroTitle span {
@@ -223,9 +234,19 @@ a.secondary_btn:hover {
 }
 
 .banner-content-con p {
-    color: rgba(255, 255, 255, 0.78) !important;
-    font-size: 17px;
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 18px;
     line-height: 1.68;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+.banner-content-con ul {
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .banner-content-con ul li {
@@ -238,19 +259,6 @@ a.secondary_btn:hover {
 
 .banner-content-con ul li i {
     color: var(--tm-accent) !important;
-}
-
-.banner-con .banner-img-con .coment-box1,
-.banner-con .banner-img-con .coment-box2 {
-    align-items: flex-start !important;
-    border-radius: 14px !important;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22) !important;
-}
-
-.banner-con .banner-img-con .coment-box1 img,
-.banner-con .banner-img-con .coment-box2 img {
-    flex: 0 0 auto;
-    margin-top: 2px;
 }
 
 /* ─── Keywords strip ─── */
@@ -1294,4 +1302,90 @@ a.secondary_btn:hover {
     }
 
     .banner-content-con h1 { font-size: 26px !important; }
+
+    .tm-hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+/* ─── Hero stats strip ─── */
+.tm-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tm-hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.tm-hero-stat strong {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--tm-accent);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.tm-hero-stat span {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-align: center;
+}
+
+/* ─── Feature boxes with FA icons ─── */
+.feature-box-icon {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px !important;
+}
+
+.tm-feature-icon-wrap {
+    width: 68px;
+    height: 68px;
+    border-radius: 18px;
+    background: var(--tm-green-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+}
+
+.feature-box-icon.bg-green .tm-feature-icon-wrap {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.tm-feature-icon-wrap i {
+    font-size: 26px;
+    color: var(--tm-green);
+}
+
+.feature-box-icon.bg-green .tm-feature-icon-wrap i {
+    color: #fff;
+}
+
+.feature-box-icon h4 {
+    margin-bottom: 12px;
+}
+
+.feature-box-icon p {
+    flex: 1;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--tm-gray-600);
+}
+
+.feature-box-icon.bg-green p {
+    color: rgba(255, 255, 255, 0.8) !important;
 }
