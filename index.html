@@ -242,11 +242,13 @@
     .diff__statement { padding: 1.5rem 2rem; background: var(--dark); border-radius: 12px; border-left: 4px solid var(--green-light); }
     .diff__statement p { color: rgba(255,255,255,.7); font-size: .9375rem; margin: 0; line-height: 1.65; }
     .diff__statement strong { color: #fff; font-weight: 700; }
-    .diff__visual { position: relative; height: 460px; }
-    .diff__img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
-    .diff__card { position: absolute; bottom: -1.5rem; left: -1.5rem; background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: var(--shadow-lg); max-width: 240px; }
-    .diff__card .number { font-size: 2.5rem; font-weight: 800; color: var(--green); line-height: 1; margin-bottom: .3rem; }
-    .diff__card p { font-size: .845rem; color: var(--text-light); margin: 0; }
+    .diff__visual { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-content: start; }
+    .diff__stat { background: var(--dark); border-radius: 16px; padding: 2rem 1.5rem; border-left: 4px solid var(--green-light); }
+    .diff__stat .number { font-size: 2.75rem; font-weight: 800; color: var(--green-light); line-height: 1; margin-bottom: .5rem; }
+    .diff__stat p { font-size: .875rem; color: rgba(255,255,255,.6); margin: 0; line-height: 1.5; }
+    .diff__stat--wide { grid-column: 1 / -1; background: var(--green); border-left: none; }
+    .diff__stat--wide .number { color: #fff; }
+    .diff__stat--wide p { color: rgba(255,255,255,.8); font-size: .9375rem; }
 
     /* === DIAGNÓSTICO === */
     .diagnostico { background: var(--green); }
@@ -367,8 +369,7 @@
       .pillars__grid { grid-template-columns: 1fr; }
       .method__steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
       .hero__deco { display: none; }
-      .diff__visual { height: 300px; }
-      .diff__card { left: 1rem; bottom: 1rem; }
+      .diff__visual { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer__bottom { flex-direction: column; align-items: flex-start; }
@@ -758,13 +759,25 @@
       </div>
 
       <div class="diff__visual reveal">
-        <img class="diff__img"
-             src="assets/images/trevomind-trevo-planejamento-estrategico.png"
-             alt="TrevoMind — planejamento estratégico"
-             loading="lazy">
-        <div class="diff__card">
+        <div class="diff__stat">
           <div class="number">+80</div>
           <p>Projetos realizados para empresas e instituições</p>
+        </div>
+        <div class="diff__stat">
+          <div class="number">10+</div>
+          <p>Anos de experiência em consultoria e gestão</p>
+        </div>
+        <div class="diff__stat">
+          <div class="number">4</div>
+          <p>Unidades de negócio integradas em cada projeto</p>
+        </div>
+        <div class="diff__stat">
+          <div class="number">100%</div>
+          <p>Foco em resultado real, não apenas em entregáveis</p>
+        </div>
+        <div class="diff__stat diff__stat--wide">
+          <div class="number">Do diagnóstico à execução.</div>
+          <p>A TrevoMind permanece ao lado da organização em todas as etapas — da análise inicial à implementação e mensuração de resultados.</p>
         </div>
       </div>
     </div>
